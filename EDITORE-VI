@@ -1,0 +1,21 @@
+Navigation
+Move cursor up: k
+Move cursor down: j
+Move cursor left: h
+Move cursor right: l
+Move to the beginning of a line: 0
+Move to the end of a line: $
+Move to the top of the file: gg
+Move to the bottom of the file: G
+
+
+Delete text:
+
+Delete a character: x
+Delete a word: dw
+Delete a line: dd
+
+Saving Files
+Save changes: :w
+Save as another name: :w newfilename
+Save and exit: :wq
