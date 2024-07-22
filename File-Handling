@@ -1,0 +1,47 @@
+1.uname:          Displays the kernel name
+2.whoami:         It displays the effective username of the current user
+3.which bash      
+4.ls              lists the contents
+5.ls -l           Long Format  
+6.Ls -a           List All Files (Including Hidden Files)   # a Stands for all
+7.ls -la          Long Format with Hidden Files 
+8.ls -lt          List by Modification Time       #t stands for time stamp
+9.ls -r           Reverse Listing
+10.ls -lh         Human-Readable File Sizes
+11.sudo su        sudo stands for "superuser do
+12.cd:            Change directory
+13.cp:            Copy files and directories
+14.mv:            Move or rename files and directories.    #mv oldname.txt newname.txt(rename)        #mv /path/to/file /new/path/(move)
+15.rm:            Remove files and directories.
+16.touch:         Create an empty file or update the timestamp of a file.
+17.cat:           Concatenate and display file content.
+18.vi / vim:      Text editors for editing files
+19.mkdir:         Create directories
+20.rmdir:         Remove empty directories.
+21.cd -           it changes the current directory to the directory you were in before the most recent
+22) .             represents the current directory  
+23)..             represents the parent directory of the current directory     # cd ..(change directory to previous path)
+
+Create a Nested Directory Structure:
+mkdir -p parent/child/grandchild
+
+# how to create file with pre defined space 
+fallocate -l 100M myfile.bin
+
+#explanation:
+f ,allocate: A command to allocate space for a file.
+-l 100M: Specifies the length of the file to allocate (100 megabytes).
+myfile: The name of the file to create.
+
+lifecycle of a file:
+1.Creation:       touch myfile.txt
+2.Modification:   echo "New content" >> myfile.txt
+3.Viewing:        cat myfile.txt
+4.Copying:        cp myfile.txt /path/to/destination/
+5.Moving/Renaming:  mv myfile.txt newname.txt
+6.Linking:         ln -s myfile.txt symlink.txt
+7.Permission Changes:  chmod 755 myfile.txt
+8.Archiving/Compressing:  tar -cvf archive.tar myfile.txt
+9.Transfer: scp myfile.txt user@remote:/path/to/destination/
+10.Backup:  cp myfile.txt /path/to/backup/
+11.Deletion:    rm myfile.txt
