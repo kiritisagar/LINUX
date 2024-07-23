@@ -45,3 +45,23 @@ lifecycle of a file:
 9.Transfer: scp myfile.txt user@remote:/path/to/destination/
 10.Backup:  cp myfile.txt /path/to/backup/
 11.Deletion:    rm myfile.txt
+
+
+# GREP:
+The grep command in Unix-based systems (like Linux and macOS) is used to search for text patterns within files.
+1.Search for a pattern in a file:
+  grep "hello" file.txt
+
+2.Search for a pattern in multiple files:
+  grep "hello" file1.txt file2.txt
+Recursive search in a directory:
+grep -r "hello" /path/to/directory
+
+3.Show line numbers of matches:
+  grep -n "hello" file.txt
+
+4.Show only filenames containing matches:
+grep -l "hello" *.txt
+
+5.Count the number of matching lines:
+grep -c "hello" file.txt
