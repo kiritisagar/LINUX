@@ -21,6 +21,22 @@
 21.cd -           it changes the current directory to the directory you were in before the most recent
 22) .             represents the current directory  
 23)..             represents the parent directory of the current directory     # cd ..(change directory to previous path)
+24.wc             word count      # cat file name | wc 
+25.l,w,c          (l)Counts the number of lines  (w)number of words  (c)number of bytes
+
+
+#### ALL RM(remove commands):
+Remove a single file:                           rm filename
+Remove multiple files:                          rm file1 file2 file3
+Remove all files in the current directory:      rm *
+Deletes all files in the current directory (but not subdirectories).
+Remove all .txt files:                          rm *.txt
+Remove all files with a specific prefix:        rm prefix*
+Remove a directory and its contents recursively: rm -r dirname
+Force remove files without prompting:           rm -f filename
+Combine recursive and force options:            rm -rf dirname
+Prompt before every removal:                    rm -i filename
+
 
 Create a Nested Directory Structure:
 mkdir -p parent/child/grandchild
@@ -65,3 +81,11 @@ grep -l "hello" *.txt
 
 5.Count the number of matching lines:
 grep -c "hello" file.txt
+
+Links:
+Symbolic (Soft) Links
+
+NOTES:
+*   List all 
+.   represents the current directory  
+..  represents the parent directory of the current directory     # cd ..(change directory to previous path)
