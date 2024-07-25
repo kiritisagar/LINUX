@@ -1,6 +1,12 @@
 # File-Based Package Management:
-it involves manually downloading and installing package files, primarily using dpkg for Debian-based systems and rpm for Red Hat-based systems.
+it involves manually downloading and installing package files.
+primarily using dpkg for Debian-based systems and rpm for Red Hat-based systems.
+DPKG stands for Debian Package Manager.
+
 
 # Repository-Based Package Management:
-connects to online repositories to automate the process of installing, updating, and removing packages, primarily using apt for Debian-based systems and yum/dnf for Red Hat-based systems.
+connects to online repositories to automate the process of installing, updating, and removing packages.
+primarily using apt for Debian-based systems and yum/dnf for Red Hat-based systems.
 
+apt stands for Advanced Packaging Tool
+Yellowdog Updater, Modified
