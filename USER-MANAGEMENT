@@ -1,0 +1,11 @@
+User Information Files:
+/etc/passwd: This file stores essential information about each user, including the username, user ID (UID), group ID (GID), home directory, and shell.
+/etc/shadow: This file stores encrypted password information and other password-related details.
+/etc/group: This file stores group information, including group names, GIDs, and group member lists.
+
+
+
+
+commands:
+users      Displays a list of logged-in users.
+who        Displays who is currently logged in.
