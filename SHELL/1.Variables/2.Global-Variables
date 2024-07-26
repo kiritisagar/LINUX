@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Define a global variable
+GLOBAL_VAR="I am a global variable"
+
+# Define a function
+my_function() {
+    # Access the global variable inside the function
+    echo "Inside function: $GLOBAL_VAR"
+}
+
+# Call the function
+my_function
+
+# Access the global variable outside the function
+echo "Outside function: $GLOBAL_VAR"
+
+# Modify the global variable inside the function
+modify_function() {
+    GLOBAL_VAR="I am modified by the function"
+}
+
+# Call the modify function
+modify_function
+
+# Access the modified global variable
+echo "After modification: $GLOBAL_VAR"
