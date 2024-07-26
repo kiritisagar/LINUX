@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# 1. Storing and Using Strings
+STRING_VAR="Hello, World!"
+echo "String: $STRING_VAR"
+
+# 2. Storing and Using Numbers
+NUM1=10
+NUM2=20
+SUM=$((NUM1 + NUM2))
+echo "Sum of $NUM1 and $NUM2 is: $SUM"
+
+# 3. Using Variables in Strings
+NAME="Alice"
+GREETING="Hello, $NAME!"
+echo "$GREETING"
+
+# 4. Reading User Input into Variables
+read -p "Enter your favorite color: " COLOR
+echo "Your favorite color is $COLOR"
+
+# 5. Default Values for Variables
+: ${DEFAULT_VAR:="Default Value"}
+echo "Default variable value is: $DEFAULT_VAR"
+
+# 6. Environment Variables
+echo "Your home directory is: $HOME"
+
+# 7. Unsetting Variables
+unset STRING_VAR
+echo "STRING_VAR after unset: $STRING_VAR"
