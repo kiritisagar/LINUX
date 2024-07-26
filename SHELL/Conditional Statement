@@ -1,0 +1,36 @@
+Conditional Statement:
+A conditional statement is like a decision-making tool in your script. It helps your script choose between different actions based on conditions you specify.
+
+Basic Components
+Condition: The expression you want to check. For example, "Does this file exist?" or "Is this number greater than 10?"
+Action: The code that runs if the condition is true.
+Alternative Action: The code that runs if the condition is false (optional).
+Basic Syntax in Shell Scripting
+
+In shell scripting, conditional statements are often used in if statements. Here's a simple example to illustrate:
+
+if [ condition ]; then
+    # Code to run if condition is true
+else
+    # Code to run if condition is false
+fi
+
+Explanation of Syntax
+if [ condition ]; then:
+
+if starts the conditional statement.
+[ condition ] is where you place the condition you want to check. Note the spaces around the brackets [ ].
+then specifies that the following block of code should run if the condition is true.
+# Code to run if condition is true:
+
+This block of code runs if the condition evaluates to true.
+else (optional):
+
+else starts the block of code that runs if the condition is false. It’s optional and only used if you want to define what should happen when the condition is not met.
+# Code to run if condition is false:
+
+This block of code runs if the condition evaluates to false.
+fi:
+
+fi ends the if statement. It is if spelled backward and marks the end of the conditional block.
+Example
