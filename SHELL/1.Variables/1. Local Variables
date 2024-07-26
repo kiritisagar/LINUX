@@ -1,0 +1,54 @@
+____________________________________________________________________________________________________________________________________
+Local Variable in a Script
+____________________________________________________________________________________________________________________________________
+
+#!/bin/bash
+
+# Define a local variable within a script
+MY_VAR="Hello, World!"
+
+# Print the local variable
+echo $MY_VAR
+
+________________________________________________________________
+explanation:
+MY_VAR is a local variable defined within the script.
+The value of MY_VAR is printed using the echo command.
+
+___________________________________________________________________________________________________________________________________
+Local Variable in a Function
+____________________________________________________________________________________________________________________________________
+Here is an example of a local variable defined within a function:
+
+#!/bin/bash
+
+# Define a function
+my_function() {
+    local LOCAL_VAR="I am local to this function"
+    echo $LOCAL_VAR
+}
+
+# Call the function
+my_function
+
+# Try to access the local variable outside the function (will not work)
+echo $LOCAL_VAR
+
+___________________________________________________________________________
+explanation
+___________________________________________________________________________
+explanation:
+my_function:
+this is the name of the function
+
+local LOCAL_VAR="I am local to this function":
+local is a keyword that makes LOCAL_VAR a local variable, meaning it can only be accessed within this function.
+
+echo $LOCAL_VAR :
+it prints the value of LOCAL_VAR to the terminal.
+
+my_function:
+This line calls the function my_function.
+
+echo $LOCAL_VAR
+This line attempts to print the value of LOCAL_VAR outside the function.
