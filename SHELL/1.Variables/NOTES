@@ -51,6 +51,14 @@ $_: The last argument of the previous command.
 6. Array Variables
 Variables that can hold multiple values indexed by a number.
 
+NOTE:
+Declaring Variables: variable_name=value
+Using Variables: Access with $variable_name
+Arithmetic Operations: Use $((expression))
+Strings and Concatenation: Use variables within strings with $variable_name
+User Input: Read with read variable_name
+Environment Variables: Export with export variable_name=value
+Unset Variables: Use unset variable_name
 
-
+ARRAY:
 collection of items, or data, stored in contiguous memory locations
