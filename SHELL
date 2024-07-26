@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# List all files and directories named "sagar"
+echo "Listing all files and directories named 'sagar':"
+find . -name "sagar" -print
+
+# Store the list of files and directories to be deleted
+to_delete=$(find . -name "sagar")
+
+# Delete the files and directories named "sagar"
+echo "Deleting files and directories named 'sagar'..."
+find . -name "sagar" -exec rm -rf {} \;
+
+# List the deleted files and directories
+echo "Deleted files and directories:"
+for item in $to_delete; 
+do
+  echo "$item"
+done
