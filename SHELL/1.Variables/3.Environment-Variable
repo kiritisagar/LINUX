@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# 1. Accessing an Existing Environment Variable
+echo "Your home directory is: $HOME"
+
+# 2. Creating a New Environment Variable
+export MY_VAR="This is my environment variable"
+echo "MY_VAR: $MY_VAR"
+
+# 3. Modifying an Environment Variable
+export MY_VAR="This is my modified environment variable"
+echo "Modified MY_VAR: $MY_VAR"
+
+# 4. Using Environment Variables in a Function
+function print_env_var() {
+    echo "Inside function, MY_VAR: $MY_VAR"
+}
+
+print_env_var
+
+# 5. Reading Environment Variable from User Input
+read -p "Enter a new value for MY_VAR: " NEW_VALUE
+export MY_VAR="$NEW_VALUE"
+echo "Updated MY_VAR: $MY_VAR"
+
+# 6. Unsetting an Environment Variable
+unset MY_VAR
+echo "MY_VAR after unset: $MY_VAR"
+
+# 7. Display All Environment Variables (optional, may be lengthy)
+# printenv
+
+# Note: printenv can be used to print all environment variables, but it may produce a lot of output
