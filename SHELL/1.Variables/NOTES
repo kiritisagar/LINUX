@@ -1,0 +1,56 @@
+# Variable:
+A variable is a container that holds a value. 
+The value of a variable can change during the execution of the script. 
+Variables can store different types of data, such as text (strings), numbers, or other values
+
+# Declaring and Using Variables
+variables are created by simply assigning a value to a name. 
+
+## Basic Syntax
+variable_name=value
+
+No spaces around the = sign.
+Variable names are typically uppercase by convention, but lowercase is also allowed.
+
+
+# types of variables:
+1.Local Variables
+2. Global Variables
+3. Environment Variables
+4. Positional Parameters
+5. Special Variables
+6. Array Variables
+
+Special Variables
+
+
+
+1.Local Variables
+Variables that are defined within a script or a function and are not accessible outside of it.
+
+2. Global Variables
+Variables that are accessible anywhere within the script after they have been declared.
+
+3. Environment Variables
+Variables that are available system-wide and can affect the behavior of the shell and other programs. They are typically exported and can be accessed by any script or process.
+
+4. Positional Parameters
+Definition: Special variables that hold the arguments passed to the script or function. They are accessed using $1, $2, ..., $N.
+  
+5. Special Variables
+Predefined variables that have special meanings and are set by the shell.
+
+Common Special Variables:
+$0: The name of the script.
+$#: The number of arguments passed to the script.
+$@: All the arguments passed to the script.
+$?: The exit status of the last command executed.
+$$: The process ID of the current shell.
+$_: The last argument of the previous command.
+
+6. Array Variables
+Variables that can hold multiple values indexed by a number.
+
+
+
+collection of items, or data, stored in contiguous memory locations
