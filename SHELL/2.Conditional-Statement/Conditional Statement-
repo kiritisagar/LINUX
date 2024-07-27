@@ -34,3 +34,29 @@ fi:
 
 fi ends the if statement. It is if spelled backward and marks the end of the conditional block.
 Example
+
+
+
+Special Operators for Conditional Statements
+Numeric Comparisons:
+
+-eq : Equal
+-ne : Not equal
+-gt : Greater than
+-lt : Less than
+-ge : Greater than or equal to
+-le : Less than or equal to
+String Comparisons:
+
+= : Equal
+!= : Not equal
+< : Less than (requires escaping)
+> : Greater than (requires escaping)
+File Tests:
+
+-e : Exists
+-d : Directory
+-f : Regular file
+-r : Readable
+-w : Writable
+-x : Executable
