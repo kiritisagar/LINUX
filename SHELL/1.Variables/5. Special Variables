@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Process ID: $$"
+
+# Run a command in the background
+sleep 10 &
+echo "Background process ID: $!"
+
+# Check the exit status of the last command
+ls /nonexistent_directory
+echo "Exit status of the last command: $?"
+
+# Number of positional parameters
+echo "Number of arguments: $#"
+
+# All positional parameters
+echo "All arguments as a single string: $*"
+echo "All arguments as separate strings: $@"
