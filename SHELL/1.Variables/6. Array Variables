@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Declare an array
+fruits=("Apple" "Banana" "Cherry" "Date")
+
+# Access individual elements
+echo "First fruit: ${fruits[0]}"
+echo "Second fruit: ${fruits[1]}"
+
+# Loop through the array elements
+echo "All fruits:"
+for fruit in "${fruits[@]}"; do
+  echo "$fruit"
+done
+
+# Length of the array
+echo "Number of fruits: ${#fruits[@]}"
+
+# Add an element to the array
+fruits+=("Elderberry")
+echo "Updated number of fruits: ${#fruits[@]}"
+echo "All fruits after adding one:"
+for fruit in "${fruits[@]}"; do
+  echo "$fruit"
+done
