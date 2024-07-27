@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define a variable
+fruit="Apple"
+
+# Check the value of the fruit
+case $fruit in
+  "Apple")
+    echo "The fruit is an Apple."
+    ;;
+  "Banana")
+    echo "The fruit is a Banana."
+    ;;
+  "Cherry")
+    echo "The fruit is a Cherry."
+    ;;
+  *)
+    echo "Unknown fruit."
+    ;;
+esac
