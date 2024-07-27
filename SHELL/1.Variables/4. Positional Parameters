@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Script name is accessed using $0
+echo "Script name: $0"
+
+# First positional parameter is accessed using $1
+echo "First argument: $1"
+
+# Second positional parameter is accessed using $2
+echo "Second argument: $2"
+
+# Count the number of positional parameters
+echo "Number of arguments: $#"
+
+# Loop through all positional parameters
+for arg in "$@"; do
+  echo "Argument: $arg"
+done
