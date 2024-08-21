@@ -1,0 +1,335 @@
+Here's a comprehensive list of Linux commands along with examples that you can practice in a single session. This guide is organized by categories and includes examples to demonstrate how each command works. 
+
+### **1. File and Directory Management**
+
+- **`ls` - List directory contents**
+  ```bash
+  ls          # List files and directories in the current directory
+  ls -l       # List with detailed information
+  ls -a       # List all files including hidden ones
+  ```
+
+- **`cd` - Change directory**
+  ```bash
+  cd /home/user/Documents   # Navigate to the 'Documents' directory
+  cd ..                     # Go up one directory level
+  cd ~                      # Go to the home directory
+  ```
+
+- **`pwd` - Print working directory**
+  ```bash
+  pwd         # Show the current directory path
+  ```
+
+- **`mkdir` - Create a new directory**
+  ```bash
+  mkdir new_folder           # Create a directory named 'new_folder'
+  mkdir -p dir1/dir2         # Create nested directories dir1 and dir2
+  ```
+
+- **`rm` - Remove files or directories**
+  ```bash
+  rm file.txt                # Delete 'file.txt'
+  rm -f file.txt             # Force delete 'file.txt' without confirmation
+  rm -r dir                  # Recursively delete directory 'dir' and its contents
+  rm -rf dir                 # Force delete directory 'dir' and its contents
+  ```
+
+- **`cp` - Copy files or directories**
+  ```bash
+  cp file1.txt file2.txt     # Copy 'file1.txt' to 'file2.txt'
+  cp -r dir1/ dir2/          # Copy directory 'dir1' and its contents to 'dir2'
+  ```
+
+- **`mv` - Move or rename files or directories**
+  ```bash
+  mv file1.txt file2.txt     # Rename 'file1.txt' to 'file2.txt'
+  mv file1.txt /home/user/   # Move 'file1.txt' to another directory
+  ```
+
+- **`touch` - Create or update a file**
+  ```bash
+  touch newfile.txt          # Create an empty file 'newfile.txt' or update its timestamp
+  ```
+
+- **`cat` - Concatenate and display file contents**
+  ```bash
+  cat file.txt               # Display the contents of 'file.txt'
+  cat file1.txt file2.txt    # Concatenate and display 'file1.txt' and 'file2.txt'
+  ```
+
+- **`head` - Display the first few lines of a file**
+  ```bash
+  head file.txt              # Show the first 10 lines of 'file.txt'
+  head -n 5 file.txt         # Show the first 5 lines of 'file.txt'
+  ```
+
+- **`tail` - Display the last few lines of a file**
+  ```bash
+  tail file.txt              # Show the last 10 lines of 'file.txt'
+  tail -n 5 file.txt         # Show the last 5 lines of 'file.txt'
+  ```
+
+- **`find` - Search for files and directories**
+  ```bash
+  find /home/user/ -name "file.txt"   # Find 'file.txt' in '/home/user/' directory
+  find . -type f -name "*.sh"         # Find all shell scripts in the current directory
+  ```
+
+- **`grep` - Search inside files for a specific pattern**
+  ```bash
+  grep "hello" file.txt       # Search for the word 'hello' in 'file.txt'
+  grep -r "hello" /home/user/ # Search recursively in all files under '/home/user/'
+  ```
+
+### **2. System Information**
+
+- **`date` - Display or set the system date and time**
+  ```bash
+  date                        # Show the current date and time
+  date +"%Y-%m-%d %H:%M:%S"   # Custom format date output
+  ```
+
+- **`uptime` - Show how long the system has been running**
+  ```bash
+  uptime                      # Display uptime, users, and load average
+  ```
+
+- **`whoami` - Display the current logged-in user**
+  ```bash
+  whoami                      # Show your current username
+  ```
+
+- **`uname -a` - Display detailed information about the system**
+  ```bash
+  uname -a                    # Show all system information
+  uname -r                    # Show kernel version
+  ```
+
+- **`df` - Show disk space usage**
+  ```bash
+  df                          # Display disk space usage for all mounted filesystems
+  df -h                       # Display in human-readable format (e.g., GB, MB)
+  ```
+
+- **`du` - Show directory space usage**
+  ```bash
+  du                          # Summarize disk usage of each file and directory
+  du -sh *                    # Display the size of each file and directory in the current folder
+  ```
+
+- **`free` - Display memory usage**
+  ```bash
+  free                        # Show memory and swap usage
+  free -h                     # Show in human-readable format
+  ```
+
+- **`top` - Display running processes and system resource usage**
+  ```bash
+  top                         # Show live view of running processes and system resource usage
+  ```
+
+### **3. Process Management**
+
+- **`ps` - Display active processes**
+  ```bash
+  ps                          # Show processes for the current shell
+  ps aux                      # Detailed output of all running processes
+  ```
+
+- **`kill` - Terminate a process by its PID**
+  ```bash
+  kill 1234                   # Kill the process with PID 1234
+  kill -9 1234                # Force kill the process with PID 1234
+  ```
+
+- **`killall` - Terminate all processes by name**
+  ```bash
+  killall firefox             # Kill all 'firefox' processes
+  ```
+
+- **`jobs` - List background jobs**
+  ```bash
+  jobs                        # List all current jobs
+  ```
+
+- **`bg` - Resume a suspended job in the background**
+  ```bash
+  bg %1                       # Resume job 1 in the background
+  ```
+
+- **`fg` - Bring a background job to the foreground**
+  ```bash
+  fg %1                       # Bring job 1 to the foreground
+  ```
+
+### **4. Networking**
+
+- **`ping` - Check connectivity to a host**
+  ```bash
+  ping google.com             # Ping Google's server
+  ```
+
+- **`ip` - Show/manipulate routing, devices, and tunnels**
+  ```bash
+  ip a                        # Show all IP addresses assigned to the system
+  ip r                        # Show the routing table
+  ```
+
+- **`curl` - Transfer data from or to a server**
+  ```bash
+  curl http://example.com     # Download the webpage from 'example.com'
+  curl -o output.html http://example.com  # Save the webpage to 'output.html'
+  ```
+
+- **`wget` - Download files from the web**
+  ```bash
+  wget http://example.com/file.zip  # Download 'file.zip' from 'example.com'
+  wget -c http://example.com/file.zip  # Continue an interrupted download
+  ```
+
+- **`netstat` - Display network connections, routing tables, and interface statistics**
+  ```bash
+  netstat                     # Show all network connections
+  netstat -tuln               # Show listening ports with numeric addresses
+  ```
+
+- **`ssh` - Securely connect to a remote server**
+  ```bash
+  ssh user@remote-server.com  # Connect to a remote server via SSH
+  ```
+
+- **`scp` - Securely copy files between servers**
+  ```bash
+  scp file.txt user@remote-server.com:/home/user/  # Copy 'file.txt' to a remote server
+  ```
+
+### **5. Permissions and Ownership**
+
+- **`chmod` - Change file permissions**
+  ```bash
+  chmod 755 script.sh         # Set permissions to rwxr-xr-x (owner can read, write, and execute; others can read and execute)
+  chmod +x script.sh          # Add execute permission
+  ```
+
+- **`chown` - Change file ownership**
+  ```bash
+  chown user:user file.txt    # Change the owner and group of 'file.txt' to 'user'
+  ```
+
+- **`chgrp` - Change group ownership**
+  ```bash
+  chgrp group file.txt        # Change the group of 'file.txt' to 'group'
+  ```
+
+### **6. Archiving and Compression**
+
+- **`tar` - Archive files into a tarball**
+  ```bash
+  tar -cvf archive.tar file1 file2  # Create 'archive.tar' containing 'file1' and 'file2'
+  tar -xvf archive.tar              # Extract all files from 'archive.tar'
+  tar -tvf archive.tar              # List contents of 'archive.tar'
+  ```
+
+- **`zip` - Compress files into a .zip archive**
+  ```bash
+  zip archive.zip file1 file2  # Create 'archive.zip' containing 'file1' and 'file2'
+  unzip archive.zip            # Extract all files from 'archive.zip'
+  ```
+
+- **`gzip` - Compress files using gzip**
+  ```bash
+  gzip file.txt                # Compress 'file.txt' into 'file.txt.gz'
+  gunzip file.txt.gz           #
+
+ Decompress 'file.txt.gz' back to 'file.txt'
+  ```
+
+### **7. Text Processing**
+
+- **`echo` - Display a line of text**
+  ```bash
+  echo "Hello, World!"         # Print 'Hello, World!' to the terminal
+  ```
+
+- **`cut` - Remove sections from each line of files**
+  ```bash
+  cut -d":" -f1 /etc/passwd    # Display the first field of each line in '/etc/passwd'
+  ```
+
+- **`sort` - Sort lines of text files**
+  ```bash
+  sort file.txt                # Sort the contents of 'file.txt' alphabetically
+  sort -n file.txt             # Sort numerically
+  ```
+
+- **`uniq` - Report or omit repeated lines**
+  ```bash
+  sort file.txt | uniq         # Remove duplicate lines from 'file.txt'
+  ```
+
+- **`wc` - Print newline, word, and byte counts for each file**
+  ```bash
+  wc file.txt                  # Show the number of lines, words, and bytes in 'file.txt'
+  wc -l file.txt               # Show only the number of lines
+  ```
+
+- **`diff` - Compare files line by line**
+  ```bash
+  diff file1.txt file2.txt     # Show differences between 'file1.txt' and 'file2.txt'
+  ```
+
+- **`awk` - Pattern scanning and processing language**
+  ```bash
+  awk '{print $1}' file.txt    # Print the first column of each line in 'file.txt'
+  ```
+
+- **`sed` - Stream editor for filtering and transforming text**
+  ```bash
+  sed 's/old/new/g' file.txt   # Replace 'old' with 'new' in 'file.txt'
+  ```
+
+### **8. Disk and Filesystem Management**
+
+- **`mount` - Mount a filesystem**
+  ```bash
+  mount /dev/sda1 /mnt         # Mount '/dev/sda1' to '/mnt'
+  ```
+
+- **`umount` - Unmount a filesystem**
+  ```bash
+  umount /mnt                  # Unmount '/mnt'
+  ```
+
+- **`fsck` - Filesystem consistency check and repair**
+  ```bash
+  fsck /dev/sda1               # Check and repair the filesystem on '/dev/sda1'
+  ```
+
+- **`mkfs` - Create a filesystem**
+  ```bash
+  mkfs.ext4 /dev/sda1          # Create an ext4 filesystem on '/dev/sda1'
+  ```
+
+### **9. Package Management (Debian/Ubuntu-based)**
+
+- **`apt-get` - Manage packages**
+  ```bash
+  sudo apt-get update          # Update package lists
+  sudo apt-get upgrade         # Upgrade all installed packages
+  sudo apt-get install nginx   # Install 'nginx' package
+  sudo apt-get remove nginx    # Remove 'nginx' package
+  ```
+
+### **10. Scripting Basics**
+
+- **Create a simple shell script**
+  ```bash
+  echo -e "#!/bin/bash\n\n echo Hello, World!" > script.sh  # Create a script
+  chmod +x script.sh              # Make it executable
+  ./script.sh                     # Run the script
+  ```
+
+---
+
+These commands will give you a solid foundation in using Linux for a variety of tasks. Practice them in different scenarios, and try combining them to create more complex commands or scripts.
