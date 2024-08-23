@@ -1,0 +1,23 @@
+####### Attaching a volume to a Linux system
+
+# List all block devices
+lsblk
+sudo fdisk -l
+
+# Format the volume (if required)
+sudo mkfs -t ext4 /dev/xvdf
+
+# Create a mount point
+sudo mkdir /mnt/mydata
+
+# Mount the volume
+sudo mount /dev/xvdf /mnt/mydata
+
+# Verify the mount
+df -h
+
+# Optional: Add to /etc/fstab for automatic mounting
+sudo nano /etc/fstab
+
+# Unmount the volume
+sudo umount /mnt/mydata
