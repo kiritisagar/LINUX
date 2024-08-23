@@ -159,11 +159,19 @@ fallocate -l 100M myfile.bin
 - **`chgrp` - Change group ownership**
   chgrp group file.txt        # Change the group of 'file.txt' to 'group'
 
+### **6. Package Management (Debian/Ubuntu-based)**
+- **`apt-get` - Manage packages**
+  sudo apt-get update          # Update package lists
+  sudo apt-get upgrade         # Upgrade all installed packages
+  sudo apt-get install nginx   # Install 'nginx' package
+  sudo apt-get remove nginx    # Remove 'nginx' package
+
 ### **6. Archiving and Compression**
 - **`tar` - Archive files into a tarball**
   tar -cvf archive.tar file1 file2  # Create 'archive.tar' containing 'file1' and 'file2'
+      -create,verbose,file
   tar -xvf archive.tar              # Extract all files from 'archive.tar'
-  tar -tvf archive.tar              # List contents of 'archive.tar'
+      -extract,verbose,file
 
 - **`zip` - Compress files into a .zip archive**
   zip archive.zip file1 file2  # Create 'archive.zip' containing 'file1' and 'file2'
@@ -171,27 +179,17 @@ fallocate -l 100M myfile.bin
 
 - **`gzip` - Compress files using gzip**
   gzip file.txt                # Compress 'file.txt' into 'file.txt.gz'
-  gunzip file.txt.gz           #
-
  Decompress 'file.txt.gz' back to 'file.txt'
 
 ### **7. Text Processing**
 - **`echo` - Display a line of text**
   echo "Hello, World!"         # Print 'Hello, World!' to the terminal
 
-- **`cut` - Remove sections from each line of files**
-  cut -d":" -f1 /etc/passwd    # Display the first field of each line in '/etc/passwd'
-  
-- **`sort` - Sort lines of text files**
-  sort file.txt                # Sort the contents of 'file.txt' alphabetically
-  sort -n file.txt             # Sort numerically
-  
-- **`uniq` - Report or omit repeated lines**
-  sort file.txt | uniq         # Remove duplicate lines from 'file.txt'
-
 - **`wc` - Print newline, word, and byte counts for each file**
-  wc file.txt                  # Show the number of lines, words, and bytes in 'file.txt'
+  wc file.txt                  # Show the number of lines, words, and characters  in 'file.txt'
   wc -l file.txt               # Show only the number of lines
+  wc -w file.txt               # shows only words
+  wc -m file.txt               # shows only characters 
 
 - **`diff` - Compare files line by line**
   diff file1.txt file2.txt     # Show differences between 'file1.txt' and 'file2.txt' 
@@ -200,30 +198,5 @@ fallocate -l 100M myfile.bin
   awk '{print $1}' file.txt    # Print the first column of each line in 'file.txt' 
 
 - **`sed` - Stream editor for filtering and transforming text**
-  sed 's/old/new/g' file.txt   # Replace 'old' with 'new' in 'file.txt'
-  
-
-### **8. Disk and Filesystem Management**
-- **`mount` - Mount a filesystem**
-  mount /dev/sda1 /mnt         # Mount '/dev/sda1' to '/mnt'
-  
-
-- **`umount` - Unmount a filesystem**
-  umount /mnt                  # Unmount '/mnt'
-  
-
-- **`fsck` - Filesystem consistency check and repair**
-  fsck /dev/sda1               # Check and repair the filesystem on '/dev/sda1'
-  
-
-- **`mkfs` - Create a filesystem**
-  mkfs.ext4 /dev/sda1          # Create an ext4 filesystem on '/dev/sda1'
-
-### **9. Package Management (Debian/Ubuntu-based)**
-- **`apt-get` - Manage packages**
-  sudo apt-get update          # Update package lists
-  sudo apt-get upgrade         # Upgrade all installed packages
-  sudo apt-get install nginx   # Install 'nginx' package
-  sudo apt-get remove nginx    # Remove 'nginx' package
-  
-
+  sed 's/old/new/g' file       # Replace 'old' with 'new' in 'file.txt'
+  sed -i 's/old/new/g' file    #Edit file in place (replace "old" with "new" in the file itself):
