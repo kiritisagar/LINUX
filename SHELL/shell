@@ -1,2 +1,34 @@
 A shell script is a file containing a series of commands that you can execute in the terminal. The script allows you to automate repetitive tasks.
 
+The echo command in shell scripting is used to display text or the value of variables in the terminal. 
+-e: Enable interpretation of backslash escapes (like \n for a newline, \t for a tab).
+-n: Do not output the trailing newline.
+
+
+Substitute Command (s): The s command is used to substitute or replace text.
+
+sed 's/original/replacement/' filename
+
+In-place Editing: To edit the file in place (modify the file directly), use the -i option.
+
+sed -i 's/original/replacement/g' filename
+
+array is a data structure that allows you to store multiple values under a single variable name.
+
+index number refers to the position of an element within an array
+Zero-Based Indexing:
+
+Index numbers in shell arrays start at 0. This means that the first element of an array is accessed using the index 0, the second element with the index 1, and so on.
+
+#!/bin/bash
+
+fruits=("Apple" "Banana" "Cherry")
+
+echo "First fruit: ${fruits[0]}"  # Output: Apple
+echo "Second fruit: ${fruits[1]}" # Output: Banana
+echo "Third fruit: ${fruits[2]}"  # Output: Cherry
+
+
+
+
+Functions in shell scripting are reusable blocks of code.
