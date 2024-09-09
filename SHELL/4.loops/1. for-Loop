@@ -1,0 +1,83 @@
+Purpose: Repeats a set of commands for each item in a list.
+
+Sure! Here's a simplified explanation of loops in shell scripting:
+
+### 1. **`for` Loop**
+- **Purpose:** Repeats a set of commands for each item in a list.
+- **Example:**
+  ```bash
+  for file in *.txt
+  do
+      echo "Processing $file"
+  done
+  ```
+  This loop goes through each `.txt` file in the directory and prints "Processing" followed by the file name.
+
+### 2. **`while` Loop**
+- **Purpose:** Repeats a set of commands as long as a condition is true.
+- **Example:**
+  ```bash
+  counter=1
+  while [ $counter -le 5 ]
+  do
+      echo "Counter: $counter"
+      counter=$((counter + 1))
+  done
+  ```
+  This loop prints numbers from 1 to 5.
+
+### 3. **`until` Loop**
+- **Purpose:** Repeats a set of commands until a condition becomes true.
+- **Example:**
+  ```bash
+  counter=1
+  until [ $counter -gt 5 ]
+  do
+      echo "Counter: $counter"
+      counter=$((counter + 1))
+  done
+  ```
+  Similar to the `while` loop but runs until the counter is greater than 5.
+
+### 4. **`select` Loop**
+- **Purpose:** Creates a simple menu for the user to choose from.
+- **Example:**
+  ```bash
+  PS3="Select an option: "
+  select option in "Option 1" "Option 2" "Quit"
+  do
+      echo "You selected $option"
+      break
+  done
+  ```
+  This loop presents a menu and prints the selected option.
+
+### 5. **`break` and `continue`**
+- **`break`:** Exits the loop early.
+- **`continue`:** Skips the current iteration and moves to the next one.
+
+- **Example with `break`:**
+  ```bash
+  for num in 1 2 3 4 5
+  do
+      if [ $num -eq 3 ]; then
+          break
+      fi
+      echo "Number: $num"
+  done
+  ```
+  Stops the loop when the number 3 is reached.
+
+- **Example with `continue`:**
+  ```bash
+  for num in 1 2 3 4 5
+  do
+      if [ $num -eq 3 ]; then
+          continue
+      fi
+      echo "Number: $num"
+  done
+  ```
+  Skips printing the number 3.
+
+These are the basics of using loops in shell scripting to automate tasks!
