@@ -1,0 +1,24 @@
+These operators perform mathematical operations.
+
+a.Addition: `+`
+  result=$((a + b))
+
+b. Subtraction: `-`
+  result=$((a - b))
+
+c.Multiplication**: `*`
+  result=$((a * b))
+  
+d.Division**: `/`
+  result=$((a / b))
+
+e.Modulus (Remainder)**: `%`
+  result=$((a % b))
+
+f.Exponentiation** (Bash 5.0+): `**`
+  result=$((a ** b))
+
+
+
+
+
