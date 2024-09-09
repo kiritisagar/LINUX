@@ -19,6 +19,28 @@ f.Exponentiation** (Bash 5.0+): `**`
   result=$((a ** b))
 
 
+________________________________________________________________________________________________________________________________
+
+#!/bin/bash
+
+# Arithmetic Operators
+a=10
+b=5
+
+addition=$((a + b))
+subtraction=$((a - b))
+multiplication=$((a * b))
+division=$((a / b))
+modulus=$((a % b))
+exponentiation=$((a ** b))
+
+echo "Arithmetic Operations:"
+echo "Addition: $addition"
+echo "Subtraction: $subtraction"
+echo "Multiplication: $multiplication"
+echo "Division: $division"
+echo "Modulus: $modulus"
+echo "Exponentiation: $exponentiation"
 
 
 
