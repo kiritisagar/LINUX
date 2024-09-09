@@ -24,6 +24,47 @@ e.File is readable**: `-r`
     echo "File is readable"
   fi
 
+
+_____________________________________________________________________________________________________________
+
+# File Test Operators
+file="example.txt"
+directory="example_dir"
+
+# Create a test file and directory
+touch "$file"
+mkdir -p "$directory"
+
+echo "File Test Operations:"
+if [ -e "$file" ]; then
+    echo "File exists: $file"
+fi
+
+if [ -f "$file" ]; then
+    echo "It is a regular file: $file"
+fi
+
+if [ -d "$directory" ]; then
+    echo "Directory exists: $directory"
+fi
+
+if [ -w "$file" ]; then
+    echo "File is writable: $file"
+fi
+
+if [ -r "$file" ]; then
+    echo "File is readable: $file"
+fi
+
+if [ -x "$file" ]; then
+    echo "File is executable: $file"
+else
+    echo "File is not executable: $file"
+fi
+
+# Clean up
+rm "$file"
+rmdir "$directory"
 f.File is executable**: `-x`
   if [ -x "$file" ]; then
     echo "File is executable"
