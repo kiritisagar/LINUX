@@ -19,3 +19,28 @@ c.String length**: `-z` (is zero length), `-n` (is not zero length)
 
 
 
+____________________________________________________________________________________
+
+# String Operators
+str1="hello"
+str2="world"
+empty_str=""
+
+echo "String Operations:"
+if [ "$str1" = "$str2" ]; then
+    echo "String1 is equal to String2"
+else
+    echo "String1 is not equal to String2"
+fi
+
+if [ -z "$empty_str" ]; then
+    echo "String is empty"
+else
+    echo "String is not empty"
+fi
+
+if [ -n "$str1" ]; then
+    echo "String1 is not empty"
+fi
+
+
