@@ -1,0 +1,9 @@
+-p: Displays a prompt message.
+-s: Hides input (useful for passwords).
+-r: Reads raw input, with no interpretation of backslashes.
+-a: Reads input into an array.
+-n: Reads a specified number of characters.
+-t: Sets a timeout for input.
+-d: Reads until a specified delimiter is encountered.
+-e: Enables line editing with arrow keys.
+-u: Reads input from a specific file descriptor.
