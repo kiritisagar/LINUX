@@ -1,0 +1,24 @@
+- **Purpose:** Repeats a set of commands as long as a condition is true.
+
+
+while [ condition ]
+do
+    # Commands to execute
+done
+
+
+[ condition ]: This is the test condition that determines whether the loop should continue. It is often enclosed in square brackets.
+do and done: Define the start and end of the commands to be executed.
+
+_________________________________________________________________________________________________________________________________________________
+
+
+#!/bin/bash
+
+count=1
+
+while [ $count -le 5 ]
+do
+    echo "Count: $count"
+    count=$((count + 1))
+done
