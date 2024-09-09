@@ -1,0 +1,21 @@
+until [ condition ]
+do
+    # Commands to execute
+done
+
+
+[ condition ]: This is the test condition that determines whether the loop should stop. The loop continues until this condition becomes true.
+do and done: Define the start and end of the commands to be executed.
+
+
+________________________________________________________________________________________________________________________________
+
+#!/bin/bash
+
+count=1
+
+until [ $count -gt 5 ]
+do
+    echo "Count: $count"
+    count=$((count + 1))
+done
