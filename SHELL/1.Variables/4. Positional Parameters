@@ -1,3 +1,21 @@
+$0: The name of the script or function.
+$1, $2, $3, ...: The first, second, third, etc., command-line arguments passed to the script or function.
+$#: The total number of positional parameters (excluding $0).
+$@: All the positional parameters as separate words.
+$*: All the positional parameters as a single word (quoted together).
+$?: The exit status of the last command executed.
+$$: The process ID of the current shell.
+$!: The process ID of the last background command.
+
+
+
+
+
+
+
+
+______________________________________________________________________________________________________________________
+
 #!/bin/bash
 
 # Script name is accessed using $0
