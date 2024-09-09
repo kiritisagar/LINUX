@@ -1,0 +1,30 @@
+These operators check file attributes.
+a.File exists**: `-e`
+  if [ -e "$file" ]; then
+    echo "File exists"
+  fi
+
+b.File is a regular file**: `-f`
+  if [ -f "$file" ]; then
+    echo "It is a regular file"
+  fi
+  
+c.Directory exists**: `-d`
+  if [ -d "$directory" ]; then
+    echo "Directory exists"
+  fi
+  ```
+d.File is writable**: `-w`
+  if [ -w "$file" ]; then
+    echo "File is writable"
+  fi
+
+e.File is readable**: `-r`
+  if [ -r "$file" ]; then
+    echo "File is readable"
+  fi
+
+f.File is executable**: `-x`
+  if [ -x "$file" ]; then
+    echo "File is executable"
+  fi
