@@ -1,43 +1,35 @@
-Purpose: Repeats a set of commands for each item in a list.
-
-Sure! Here's a simplified explanation of loops in shell scripting:
-
-### 1. **`for` Loop**
+for` Loop**
 - **Purpose:** Repeats a set of commands for each item in a list.
-- **Example:**
-  ```bash
-  for file in *.txt
-  do
-      echo "Processing $file"
-  done
-  ```
-  This loop goes through each `.txt` file in the directory and prints "Processing" followed by the file name.
 
-### 2. **`while` Loop**
-- **Purpose:** Repeats a set of commands as long as a condition is true.
-- **Example:**
-  ```bash
-  counter=1
-  while [ $counter -le 5 ]
-  do
-      echo "Counter: $counter"
-      counter=$((counter + 1))
-  done
-  ```
-  This loop prints numbers from 1 to 5.
+for variable in list
+do
+    # Commands to execute
+done
 
-### 3. **`until` Loop**
-- **Purpose:** Repeats a set of commands until a condition becomes true.
-- **Example:**
-  ```bash
-  counter=1
-  until [ $counter -gt 5 ]
-  do
-      echo "Counter: $counter"
-      counter=$((counter + 1))
-  done
-  ```
-  Similar to the `while` loop but runs until the counter is greater than 5.
+
+variable: A placeholder that takes the value of each item in the list one at a time.
+list: A space-separated list of items that variable will iterate over.
+do and done: Define the start and end of the commands to be executed in each iteration.
+
+________________________________________________________________________________________________________________________________________________
+
+
+
+
+#!/bin/bash
+
+directory="/root/Shell/" #required path
+
+# Loop through each file in the directory
+for file in "$directory"*
+do 
+    echo "File: $file"
+done
+
+```
+
+
+
 
 ### 4. **`select` Loop**
 - **Purpose:** Creates a simple menu for the user to choose from.
