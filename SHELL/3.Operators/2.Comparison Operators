@@ -1,0 +1,32 @@
+These are used to compare values.
+
+a.Equal to: `-eq`
+  if [ "$a" -eq "$b" ]; then
+    echo "a is equal to b"
+  fi
+
+b.Not equal to: `-ne`
+  if [ "$a" -ne "$b" ]; then
+    echo "a is not equal to b"
+  fi
+
+c.Greater than: `-gt`
+  if [ "$a" -gt "$b" ]; then
+    echo "a is greater than b"
+  fi
+
+d.Less than: `-lt`
+  if [ "$a" -lt "$b" ]; then
+    echo "a is less than b"
+  fi
+
+e.Greater than or equal to: `-ge`
+  if [ "$a" -ge "$b" ]; then
+    echo "a is greater than or equal to b"
+  fi
+
+f.Less than or equal to: `-le`
+  if [ "$a" -le "$b" ]; then
+    echo "a is less than or equal to b"
+  fi
+
