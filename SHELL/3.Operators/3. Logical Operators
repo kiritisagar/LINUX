@@ -1,0 +1,23 @@
+
+These are used to combine conditional statements.
+
+- **AND**: `&&`
+  ```bash
+  if [ "$a" -eq 1 ] && [ "$b" -eq 2 ]; then
+    echo "a is 1 and b is 2"
+  fi
+  ```
+
+- **OR**: `||`
+  ```bash
+  if [ "$a" -eq 1 ] || [ "$b" -eq 2 ]; then
+    echo "Either a is 1 or b is 2"
+  fi
+  ```
+
+- **NOT**: `!`
+  ```bash
+  if ! [ "$a" -eq 1 ]; then
+    echo "a is not 1"
+  fi
+  ```
