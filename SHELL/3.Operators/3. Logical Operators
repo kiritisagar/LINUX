@@ -1,23 +1,36 @@
-
 These are used to combine conditional statements.
 
-- **AND**: `&&`
-  ```bash
+a.AND: `&&`
   if [ "$a" -eq 1 ] && [ "$b" -eq 2 ]; then
     echo "a is 1 and b is 2"
   fi
-  ```
 
-- **OR**: `||`
-  ```bash
+b.OR: `||`
   if [ "$a" -eq 1 ] || [ "$b" -eq 2 ]; then
     echo "Either a is 1 or b is 2"
   fi
-  ```
-
-- **NOT**: `!`
-  ```bash
+  
+c.NOT: `!`
   if ! [ "$a" -eq 1 ]; then
     echo "a is not 1"
   fi
-  ```
+
+
+_________________________________________________________________________________
+
+# Logical Operators
+condition1=true
+condition2=false
+
+echo "Logical Operations:"
+if [ "$condition1" = true ] && [ "$condition2" = false ]; then
+    echo "Condition1 is true and Condition2 is false"
+fi
+
+if [ "$condition1" = true ] || [ "$condition2" = true ]; then
+    echo "Either Condition1 is true or Condition2 is true"
+fi
+
+if ! [ "$condition1" = false ]; then
+    echo "Condition1 is not false"
+fi
