@@ -1,0 +1,21 @@
+
+These operators perform operations on strings.
+
+a.Equal to**: `=`
+  if [ "$str1" = "$str2" ]; then
+    echo "Strings are equal"
+  fi
+
+b.Not equal to**: `!=`
+  if [ "$str1" != "$str2" ]; then
+    echo "Strings are not equal"
+  fi
+  ```
+
+c.String length**: `-z` (is zero length), `-n` (is not zero length)
+  if [ -z "$str" ]; then
+    echo "String is empty"
+  fi
+
+
+
