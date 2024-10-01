@@ -51,9 +51,28 @@ For single-line comments, start the line with #.
 # Multi-Line Comment (Workaround)
 : '
 multi-line comments in shell scripts. &does nothing.
+
+# expr
+The expr command in shell scripting is used to evaluate expressions, primarily for arithmetic calculations, string manipulations, and comparisons. 
+It’s a simple utility for performing operations in scripts and command-line tasks. Here's a detailed explanation of how expr works, along with examples.
+
+Basic Usage
+The general syntax of the expr command is:
+expr expression
+
+Types of Expressions
+# Arithmetic Operations:
+
+You can perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+Example:
+a=5
+b=3
+sum=$(expr $a + $b)        # Addition
+diff=$(expr $a - $b)       # Subtraction
+product=$(expr $a \* $b)   # Multiplication (escape the * with a backslash)
+quotient=$(expr $a / $b)    # Division
+echo "Sum: $sum"
+echo "Difference: $diff"
+echo "Product: $product"
+echo "Quotient: $quotient
 '
-
-or
-
-<<this
-this
